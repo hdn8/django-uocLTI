@@ -2,7 +2,7 @@
 Django-uocLTI
 =============
 
-Django-uocLTI is a simple app for interfacing django apps to LMS platforms, created for use at the Universitat Obert de Catalunya (UOC).  This app turns a django project into an LTI provider, creating a user and an associated profile with fields based on the Consumer-provided LTI fields (`ims-lti <http://www.imsglobal.org/toolsinteroperability2.cfm>`_).
+Django-uocLTI is an app for interfacing django apps to LMS platforms, created for use at the Universitat Obert de Catalunya (UOC).  This app turns a django project into an LTI provider, creating a user and an associated profile with fields based on the Consumer-provided LTI fields (`ims-lti <http://www.imsglobal.org/toolsinteroperability2.cfm>`_).
 
 The app is more-or-less just an example of how to set up a django project for processing an LTI request from the consumer, using the `ims-lti-py library <https://pypi.python.org/pypi/ims_lti_py/>`_, along with a simple profile model to save the fields of interest.  
 
