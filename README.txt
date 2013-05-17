@@ -25,6 +25,9 @@ Settings::
 - VELVET_ADMIN_ROLES: List of roles which are added as administrators (optional: make sure these are rock solid, they set is_staff=True, is_superuser=True thereby giving full access to the app. If not set no users entering via LTI will have staff or superuser privaledges)
 - AUTH_PROFILE_MODULE: Set by default to 'uocLTI.LTIProfile', make sure this is not overridden in settings.  If you are going to be using another custom profile model, then you'll need to remove the code related to the profile fields in views.py.  
 
+- LTI_DEBUG: Set by default to False
+- LOGIN_REDIRECT_URL: set to URL for redirect after successful login
+
 Usage
 =====
 
