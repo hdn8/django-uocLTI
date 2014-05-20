@@ -1,0 +1,22 @@
+{% extends 'base.html' %}{% load i18n %}
+
+
+{% block main %}
+
+<div style="margin:20% auto;width:60%;border:1px solid #000;background:white; padding:5px;">
+{% trans 'Your role does not permit you access to this application, if you feel this is an error please contact your site administrator and include the following information' %}:
+	<hr>
+	
+	
+	LTI info:  
+	<ul>
+	<li>Name:  {{ first_name }} {{ last_name }}</li>
+	<li>Email:  {{ email }}</li>
+	<li>user_id:  {{ user_id }}</li> 
+	{% for role in roles %}
+	<li>{{ role }}</li>
+	{% endfor %}
+	</ul>
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% block main %}
+
+{% if user.is_authenticated %}
+
+Welcome {{ user.first_name }} {{ user.last_name }}!
+
+You are {% if user.is_superuser %}{% else %}not{% endif %} a site administator.  
+
+{% else %}
+You are not logged in.  This site requires login using IMS-LTI authentication, you must log into the campus first before you can access this site.  
+{% endif %}
+
+<hr>
+
+{% endblock %}
+ 

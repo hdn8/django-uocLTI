@@ -1,6 +1,6 @@
+import base64
 
-
-def get_lti_value(key, tool_provider):
+def get_lti_value(key, tool_provider, encoding=None):
     """ Searches for the given key in the tool_provider and its custom and external params.  
         If not found returns None """
     
@@ -15,6 +15,14 @@ def get_lti_value(key, tool_provider):
             lti_value = getattr(tool_provider,key)
         except AttributeError:
             print "Attribute: %s not found in LTI tool_provider" % key
+
+    if encoding == "base64": 
+        if isinstance(lti_value, list):
+            lti_value = [base64.b64decode(val) for val in lti_value] 
+        else:
+            lti_value = base64.b64decode(lti_value)
+    if encoding == "utf8": lti_value = lti_value.decode('utf-8')
+    if encoding == "iso": lti_value = lti_value.decode('latin-1')
 
     return lti_value
         
