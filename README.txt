@@ -31,4 +31,10 @@ Settings::
 Usage
 =====
 
-The LTI call from the consumer must not be base64 encoded, and the launchurl is http://<domain>/uocLTI/launch_lti/.  The launch_lti view processes the request and creates a new user and an associated profile if the user does not exist, else the user is logged in and redirected to the LOGIN_REDIRECT_URL url as defined in the project settings.
+The launchurl is http://<domain>/uocLTI/launch_lti/.  The launch_lti view processes the request and creates a new user and an associated profile if the user does not exist, else the user is logged in and redirected to the LOGIN_REDIRECT_URL url as defined in the project settings.
+
+If the provider uses an encoding, set the corresponding custom parameter to a value of 1:
+
+custom_lti_message_encoded_utf8
+custom_lti_message_encoded_iso
+custom_lti_message_encoded_base64
